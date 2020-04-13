@@ -7,7 +7,6 @@ include 'errors.php';
 $errors = array();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $field = "";
-
     $login_email = inject_checker($conn, $_POST['email']);
     $login_password = inject_checker($conn, $_POST['password']);
     //var_dump($login_password);
