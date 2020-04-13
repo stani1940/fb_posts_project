@@ -25,7 +25,7 @@ $count_likes_res=mysqli_query($conn, "SELECT COUNT(like_count) FROM like_posts l
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
             integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="includes/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
 
     <title><?php echo $page_title ?></title>
 
