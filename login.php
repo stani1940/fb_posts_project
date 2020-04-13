@@ -9,12 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $field = "";
     $login_email = inject_checker($conn, $_POST['email']);
     $login_password = inject_checker($conn, $_POST['password']);
-    //var_dump($login_password);
+
     if (!filter_var($login_email, FILTER_VALIDATE_EMAIL)) {
         array_push($errors, "Valid Email is required");
 
-    }
-    elseif (empty($login_password)) {
+    } elseif (empty($login_password)) {
         array_push($errors, "Password field is required!!!");
     } else {
         $sql = "SELECT * FROM users WHERE user_email = :user_email";
@@ -65,19 +64,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
     <body>
-
 <div id="login">
-    <h3 class="text-center text-white pt-5">Login form</h3>
 
     <div class="container">
+        <div class="profile-header">
+            <!-- BEGIN profile-header-cover -->
 
+            <!-- END profile-header-content -->
+            <!-- BEGIN profile-header-tab -->
+            <ul class="profile-header-tab nav nav-tabs">
+                <li class="nav-item"><a href="index.php" class="nav-link active show">POSTS</a>
+                </li>
+                <li class="nav-item"><a href="register.php" class="nav-link">REGISTER</a></li>
+                <li class="nav-item"><a href="login.php" class="nav-link">LOGIN</a>
+                </li>
+            </ul>
+            <!-- END profile-header-tab -->
+        </div>
         <div id="login-row" class="row justify-content-center align-items-center">
             <div id="login-column" class="col-md-6">
                 <div id="login-box" class="col-md-12">
                     <form id="login-form" class="form"
                           action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <?php
-                         display_errors($errors);
+                        display_errors($errors);
                         ?>
                         <h3 class="text-center text-info">Login</h3>
                         <div class="form-group">

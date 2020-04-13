@@ -20,6 +20,20 @@ $row_comment = mysqli_fetch_array($res_number_comments);
 $number_of_comments = $row_comment[0];
 ?>
     <body>
+<div style="background-color: #fff; " class="profile-header">
+    <!-- BEGIN profile-header-cover -->
+
+    <!-- END profile-header-content -->
+    <!-- BEGIN profile-header-tab -->
+    <ul class="profile-header-tab nav nav-tabs">
+        <li class="nav-item"><a href="index.php" class="nav-link active show">POSTS</a>
+        </li>
+        <li class="nav-item"><a href="register.php" class="nav-link">REGISTER</a></li>
+        <li class="nav-item"><a href="login.php" class="nav-link">LOGIN</a>
+        </li>
+    </ul>
+    <!-- END profile-header-tab -->
+</div>
     <nav class="navbar navbar-light bg-white">
         <a href="#" class="navbar-brand">USER DASHBOARD</a>
         <form class="form-inline">

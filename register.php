@@ -44,6 +44,8 @@ if (isset($_POST['submit'])) {
         $insert_query = "INSERT INTO users(`first_name`, `second_name`, `last_name`, `user_email`, `user_password`,`user_register_date`,`user_type`) VALUES('" . trim($first_name) . "','" . trim($second_name) . "', '" . trim($last_name) . "','" . trim($email) . "','" . $hash_password . "','" . $now . "','" . $user_type . "')";
         if (mysqli_query($conn, $insert_query)) {
             header('Location:login.php');
+            $success_message = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
+            echo $success_message;
         } else {
             $error_message = "Error in registering...Please try again later! ";
             echo "<div class='error' >" . $error_message . mysqli_error($conn) . "</div>";
@@ -54,6 +56,20 @@ if (isset($_POST['submit'])) {
     <body>
     <div id="login">
         <div class="container">
+            <div class="profile-header">
+                <!-- BEGIN profile-header-cover -->
+
+                <!-- END profile-header-content -->
+                <!-- BEGIN profile-header-tab -->
+                <ul class="profile-header-tab nav nav-tabs">
+                    <li class="nav-item"><a href="index.php" class="nav-link active show">POSTS</a>
+                    </li>
+                    <li class="nav-item"><a href="register.php" class="nav-link">REGISTER</a></li>
+                    <li class="nav-item"><a href="login.php" class="nav-link">LOGIN</a>
+                    </li>
+                </ul>
+                <!-- END profile-header-tab -->
+            </div>
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
