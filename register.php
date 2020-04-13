@@ -44,8 +44,6 @@ if (isset($_POST['submit'])) {
         $insert_query = "INSERT INTO users(`first_name`, `second_name`, `last_name`, `user_email`, `user_password`,`user_register_date`,`user_type`) VALUES('" . trim($first_name) . "','" . trim($second_name) . "', '" . trim($last_name) . "','" . trim($email) . "','" . $hash_password . "','" . $now . "','" . $user_type . "')";
         if (mysqli_query($conn, $insert_query)) {
             header('Location:login.php');
-            $success_message = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
-            echo $success_message;
         } else {
             $error_message = "Error in registering...Please try again later! ";
             echo "<div class='error' >" . $error_message . mysqli_error($conn) . "</div>";
