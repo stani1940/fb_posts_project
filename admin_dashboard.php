@@ -152,7 +152,7 @@ include 'includes/db_connect.php';
                 </div>
                 <!--Latest User-->
                 <div class="panel panel-default">
-                    <div class="panel-heading"style="background-color:  #095f59;>
+                    <div class="panel-heading"style="background-color:  #095f59;">
     <h3 class="panel-title">Latest Users</h3>
                 </div>
                 <div class="panel-body">

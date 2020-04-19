@@ -4,7 +4,7 @@ if (!$conn){
     die("Connection failed ".mysqli_connect_error()." - ".mysqli_connect_errno());
 }
 session_start();
-
+error_reporting(E_ALL & ~E_NOTICE);
 //else{
 //echo "Database connected successfully";
 //}
