@@ -75,6 +75,7 @@ $number_of_comments = $row_comment[0];
 
                         <li class="list-group-item">
                             <div class="btn-group">
+                                <button class="btn btn-primary "><a class="text-white" href="user.php?id=<?php echo $_SESSION['id'] ?>">Show more!</a></button>
                                 <button class="btn btn-primary "><a class="text-white" href="logout.php">LOGOUT</a>
                                 </button>
                             </div>
