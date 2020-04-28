@@ -2,6 +2,7 @@
 $page_title = "Update post";
 include 'includes/header.php';
 include 'includes/db_connect.php';
+ob_start();
 if ($_GET['id']) {
     $postID = $_GET['id'];
 
@@ -56,8 +57,9 @@ if ($_GET['id']) {
             if (!$updatePost) {
                 echo mysqli_error($conn);
             } else {
-                echo "Поста е обновен успешно!!!";
+                //echo "Поста е обновен успешно!!!";
                 header('Location:show_post.php?id='.$postID);
+                ob_end_clean();
             }
         }
 
