@@ -73,7 +73,7 @@ $selectPosts = mysqli_query($conn, $read_post_query);
         </div>
     </div>
 </header>
-    <table class="table table-stripped">
+    <table class="table table-bordered table-hover table-stripped">
         <tr>
             <td>№</td>
             <td><h5 class="card-title">Author</h5></td>

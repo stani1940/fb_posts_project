@@ -1,7 +1,8 @@
 <?php
 $page_title = "Update post";
-include 'includes/header_post.php';
+include 'includes/header.php';
 include 'includes/db_connect.php';
+ob_start();
 if ($_GET['id']) {
     $postID = $_GET['id'];
 
@@ -21,22 +22,22 @@ if ($_GET['id']) {
                             <h3 class="text-center text-info">UPDATE </h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Post Title:</label>
-                                <input type="text" id="username" name="post_title"
+                                <input type="text"  class="form-control" id="username" name="post_title"
                                        value="<?php echo $postInfo['post_title']; ?>"/>
                             </div>
                             <div class="form-group">
 
                                 <label for="username" class="text-info">Post Content:</label>
 
-                                <textarea id="username" name="post_content" rows="4" cols="50">
+                                <textarea class="form-control" id="username" name="post_content" rows="4" cols="50">
                                     <?php echo $postInfo['post_content']; ?>
                                 </textarea>
                             </div>
-                            <div class="form-group">
-                            Post URL: <input type="url" name="post_url"
+                            <div class="form-group"><label for="username" class="text-info">Post URL:</label>
+                             <input type="url" class="form-control" name="post_url"
                                              value="<?php echo $postInfo['post_url']; ?>"/>
                             </div>
-                            <input type="submit" name="update_post" value="Update Post"/>
+                            <input type="submit" class="btn btn-danger" name="update_post" value="Update Post"/>
                         </form>
                     </div>
                 </div>
@@ -56,7 +57,8 @@ if ($_GET['id']) {
                 echo mysqli_error($conn);
             } else {
                 echo "Поста е обновен успешно!!!";
-                header('Location:show_post.php');
+                header('Location:show_post.php?id='.$postID);
+            ob_flush();
             }
         }
 

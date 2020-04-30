@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost','root',"sitevrc22",'fb_posts');
+$conn = mysqli_connect('localhost','root',"",'fb_posts');
 if (!$conn){
     die("Connection failed ".mysqli_connect_error()." - ".mysqli_connect_errno());
 }
@@ -11,7 +11,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 $host = '127.0.0.1';
 $db   = 'fb_posts';
 $user = 'root';
-$pass = 'sitevrc22';
+$pass = '';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
