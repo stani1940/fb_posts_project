@@ -54,103 +54,6 @@ if (isset($_SESSION['id'])) {
     }
     ?>
     <style>
-        <!--
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        Hero
-
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        =
-        -->
         body {
 
         }
@@ -288,8 +191,7 @@ if (isset($_SESSION['id'])) {
                                     }
                                 }
 
-                                ?>
-                            </em>
+                                ?></em>
                         </ul>
                         <ul>
                             <?php
@@ -312,19 +214,7 @@ if (isset($_SESSION['id'])) {
                                 echo 'No';
                             }
                             ?>
-                            <span>
-                                <?php
-                                $count_likes_res=mysqli_query($conn, "SELECT COUNT(like_count) FROM like_posts WHERE post_id = " . $_GET['id']);
-                                        if (mysqli_num_rows( $count_likes_res)>0){
-                                            if($count_likes = mysqli_fetch_array($count_likes_res)){
-                                                echo $count_likes[0] . " likes";
-                                            }
-
-
-                                        }
-
-                                ?>
-                            </span>
+                            <span>242 Likes</span>
                         </ul>
                     </div><!--/ cardbox-base -->
                     <div class="cardbox-comments">

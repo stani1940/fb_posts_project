@@ -20,8 +20,10 @@ $query_number_comments = "SELECT COUNT(*) FROM `comments` WHERE `user_id` ='" . 
 $res_number_comments = mysqli_query($conn, $query_number_comments);
 $row_comment = mysqli_fetch_array($res_number_comments);
 $number_of_comments = $row_comment[0];
+
+if(isset($_SESSION['id'])){
 ?>
-    <body xmlns="http://www.w3.org/1999/html">
+<body xmlns="http://www.w3.org/1999/html">
 <div style="background-color: #fff; " class="profile-header">
     <!-- BEGIN profile-header-cover -->
 
@@ -29,9 +31,6 @@ $number_of_comments = $row_comment[0];
     <!-- BEGIN profile-header-tab -->
     <ul class="profile-header-tab nav nav-tabs">
         <li class="nav-item"><a href="index.php" class="nav-link active show">POSTS</a>
-        </li>
-        <li class="nav-item"><a href="register.php" class="nav-link">REGISTER</a></li>
-        <li class="nav-item"><a href="login.php" class="nav-link">LOGIN</a>
         </li>
     </ul>
     <!-- END profile-header-tab -->
@@ -75,7 +74,7 @@ $number_of_comments = $row_comment[0];
 
                         <li class="list-group-item">
                             <div class="btn-group">
-                                <button class="btn btn-primary "><a class="text-white" href="user.php?id=<?php echo $_SESSION['id'] ?>">Show more!</a></button>
+                                <button class="btn btn-primary "><a class="text-white" href="user.php?id=<?php echo $_SESSION['id'] ?>">Profil</a></button> 
                                 <button class="btn btn-primary "><a class="text-white" href="logout.php">LOGOUT</a>
                                 </button>
                             </div>
@@ -111,23 +110,22 @@ $number_of_comments = $row_comment[0];
                                 </li>
                             </ul>
                         </div>
-
                         <div class="card-body">
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="posts" role="tabpanel"
                                      aria-labelledby="posts-tab">
                                     <div class="form-group">
-                                        <label class="sr-only" for="message">post</label>
+                                        <span>Post Title</span>
                                         <input type="text" class="form-control" id="message"
                                                placeholder="Post title" name="post_title">
                                     </div>
                                     <div class="form-group">
-                                        <label class="sr-only" for="message">post</label>
+                                        <span>Post content</span>
                                         <textarea class="form-control" id="message" rows="3"
                                                   placeholder="Post content" name="post_content"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label class="sr-only" for="message">post</label>
+                                        <span>Post url</span>
                                         <input type="url" class="form-control" id="message"
                                                placeholder="Post url" name="post_link">
                                     </div>
@@ -193,8 +191,9 @@ $number_of_comments = $row_comment[0];
             </div>
         </div>
     </div>
-
-
 <?php
+} else {
+    header("Location: login.php");
+}
 include 'includes/footer.php'
 ?>

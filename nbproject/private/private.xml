@@ -3,16 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/xampp/htdocs/fbposts/show_post.php</file>
-            <file>file:/E:/xampp/htdocs/fbposts/errors.php</file>
-            <file>file:/E:/xampp/htdocs/fbposts/register.php</file>
-            <file>file:/E:/xampp/htdocs/fbposts/includes/header.php</file>
-            <file>file:/E:/xampp/htdocs/fbposts/login.php</file>
-            <file>file:/E:/xampp/htdocs/fbposts/styles/users.css</file>
-            <file>file:/E:/xampp/htdocs/fbposts/includes/header_post.php</file>
+            <file>file:/E:/xampp/htdocs/fbposts/admin_dashboard.php</file>
+            <file>file:/E:/xampp/htdocs/fbposts/index.php</file>
+            <file>file:/E:/xampp/htdocs/fbposts/add_post.php</file>
             <file>file:/E:/xampp/htdocs/fbposts/includes/db_connect.php</file>
-            <file>file:/E:/xampp/htdocs/fbposts/user.php</file>
             <file>file:/E:/xampp/htdocs/fbposts/includes/functions.php</file>
+            <file>file:/E:/xampp/htdocs/fbposts/user_dashboard.php</file>
         </group>
     </open-files>
 </project-private>
