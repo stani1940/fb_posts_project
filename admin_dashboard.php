@@ -6,7 +6,7 @@ include 'includes/db_connect.php';
 $selectUser = mysqli_query($conn, "SELECT * FROM users WHERE user_id = ".$_SESSION['id']);
 $resultUser = mysqli_fetch_assoc($selectUser);
 
-if(isset($_SESSION['id']) == $resultUser['user_id']){
+if(isset($_SESSION['id'])){
 ?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
