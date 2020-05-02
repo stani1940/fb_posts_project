@@ -47,8 +47,8 @@ $selectPosts = mysqli_query($conn, $read_post_query);
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.php">Dashboard</a></li>
                 <li><a href="read_posts.php">POSTS</a></li>
-                <li><a href="comments.php">COMMENTS</a></li>
-                <li><a href="users.php">USERS</a></li>
+               <!-- <li><a href="comments.php">COMMENTS</a></li>-->
+                <li><a href="admin_dashboard.php">Admin Panel</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

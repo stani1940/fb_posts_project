@@ -50,8 +50,8 @@ $sql_post = "SELECT COUNT(*) FROM posts";
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.php">Dashboard</a></li>
                 <li><a href="read_posts.php">POSTS</a></li>
-                <li><a href="comments.php">COMMENTS</a></li>
-                <li><a href="users.php">USERS</a></li>
+                <!--<li><a href="comments.php">COMMENTS</a></li>-->
+                <!--<li><a href="users.php">USERS</a></li>-->
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -184,25 +184,39 @@ $sql_post = "SELECT COUNT(*) FROM posts";
                 </div>
                 <!--Latest User-->
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color:  #095f59;>
-    <h3 class=" panel-title
-                    ">Latest Users</h3>
+                    <div class="panel-heading" style="background-color:  #095f59;">
+    <h3 class=" panel-title">Latest Users</h3>
                 </div>
                 <div class="panel-body">
                     <table class="table table-striped table-hover">
                         <?php if (mysqli_num_rows($read_users) > 0) { ?>
                             <tr>
+                                <th>BANNED</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Joined</th>
+                                <th>Update</th>
+                                <th>Ban</th>
+                                <th></th>
                             </tr>
                             <?php
                             while ($row = mysqli_fetch_assoc($read_users)) {
                                 ?>
                                 <tr>
+                                    <?php
+                                    if($row['user_banned'] == 1){
+                                        ?>
+                                    <td><a href="banuser.php?id=<?php echo $row['user_id']; ?>" class="btn btn-danger">BANNED</a></td>
+                                    <?php
+                                    } else {
+                                        echo '<td></td>';
+                                    }
+                                    ?>
                                     <td><?php echo $row['first_name'] . " " . $row['last_name'] ?></td>
                                     <td><?php echo $row['user_email'] ?></td>
                                     <td><?php echo $row['user_register_date'] ?></td>
+                                    <td><a href="user.php?id=<?php echo $row['user_id']; ?>" class="btn btn-primary">Update Profil</a></td>
+                                    <td><a href="banuser.php?id=<?php echo $row['user_id']; ?>" class="btn btn-danger">Ban User</a></td>
                                 </tr>
 
 
