@@ -22,7 +22,7 @@ if ($_GET['id']) {
                             <h3 class="text-center text-info">UPDATE </h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Post Title:</label>
-                                <input type="text"  class="form-control" id="username" name="post_title"
+                                <input type="text" class="form-control" id="username" name="post_title"
                                        value="<?php echo $postInfo['post_title']; ?>"/>
                             </div>
                             <div class="form-group">
@@ -34,8 +34,8 @@ if ($_GET['id']) {
                                 </textarea>
                             </div>
                             <div class="form-group"><label for="username" class="text-info">Post URL:</label>
-                             <input type="url" class="form-control" name="post_url"
-                                             value="<?php echo $postInfo['post_url']; ?>"/>
+                                <input type="url" class="form-control" name="post_url"
+                                       value="<?php echo $postInfo['post_url']; ?>"/>
                             </div>
                             <input type="submit" class="btn btn-danger" name="update_post" value="Update Post"/>
                         </form>
@@ -56,9 +56,8 @@ if ($_GET['id']) {
             if (!$updatePost) {
                 echo mysqli_error($conn);
             } else {
-                echo "Поста е обновен успешно!!!";
-                header('Location:show_post.php?id='.$postID);
-            ob_flush();
+                header('Location:show_post.php?id=' . $postID);
+                ob_flush();
             }
         }
 

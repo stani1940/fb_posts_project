@@ -1,11 +1,12 @@
 .hero {
     padding: 6.25rem 0px !important;
-    margin: 0px !important;
+    margin: 0 !important;
+    background-color: #17a2b8 !important;
 }
 .cardbox {
     border-radius: 3px;
     margin-bottom: 20px;
-    padding: 0px !important;
+    padding: 0 !important;
 }
 
 /* ------------------------------- */
@@ -41,7 +42,7 @@
 .cardbox .float-right a.dropdown-item {
     display: block;
     width: 100%;
-    padding: 4px 0px 4px 10px;
+    padding: 4px 0 4px 10px;
     clear: both;
     font-weight: 400;
     font-family: 'Abhaya Libre', serif;

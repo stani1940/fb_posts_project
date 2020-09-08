@@ -1,14 +1,10 @@
 <?php
-$pageTitle = "Add post";
 include 'includes/db_connect.php';
 include 'includes/header.php';
 include 'errors.php';
 $errors =array();
-
 if ($_POST) {
-
     $id = $_SESSION['id'];
-
     $postTitle = $_POST['post_title'];
     $postTitle = filter_var($postTitle, FILTER_SANITIZE_STRING);
     if (empty($postTitle)){

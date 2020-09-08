@@ -54,12 +54,9 @@ if (isset($_SESSION['id'])) {
     }
     ?>
 <style type="text/css">
-        body {
-
-        }
 
         .hero {
-            padding: 6.25rem 0px !important;
+            padding: 6.25rem 0 !important;
             margin: 0px !important;
             background-color: #17a2b8;
         }
